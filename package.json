@@ -1,0 +1,13 @@
+{
+  "name": "note-taking-app",
+  "version": "1.0.0",
+  "description": "A simple note taking application with a black and white theme.",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"No start script yet\"",
+    "test": "echo \"No test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+} 
