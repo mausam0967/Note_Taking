@@ -20,6 +20,15 @@ body {
     overflow: hidden; /* Prevent content from overflowing */
 }
 
+#sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    border-right: 1px solid #000000; /* Separator line */
+    padding: 15px; /* Add some padding inside the sidebar */
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: #FFFFFF; /* White background for the sidebar */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
 #app-view {
     flex-grow: 1;
     padding: 0; /* Padding is applied within specific views */
@@ -195,25 +204,21 @@ body {
 }
 
 /* Styles for Menu View */
+/* The menu will now be part of the persistent sidebar layout */
 #menu-view {
-    width: 250px;
-    border-left: 1px solid #000000;
-    padding: 15px;
+    width: 100%; /* Take full width of sidebar */
+    /* Removed absolute positioning styles */
+    padding: 0; /* Padding is now on sidebar */
     box-sizing: border-box;
-    background-color: #FFFFFF;
+    background-color: transparent; /* Background on sidebar */
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    z-index: 100;
-    transition: right 0.3s ease-in-out;
+    /* Removed position, top, right, height, z-index, transition */
 }
 
-/* Style to hide the menu off-screen */
+/* Style to hide the menu off-screen - removed */
 #menu-view.hidden {
-    right: -250px;
+    /* This style is no longer needed with the persistent sidebar */
 }
 
 #menu-header {
@@ -354,15 +359,15 @@ body {
 
 /* Styles for tag management in Edit Note View */
 #tag-management {
-    margin-top: 20px; /* Increased top margin */
-    padding-top: 20px; /* Increased top padding */
+    margin-top: 20px;
+    padding-top: 20px;
     border-top: 1px solid #000000;
 }
 
 #tag-management label {
     display: block;
     font-weight: bold;
-    margin-bottom: 10px; /* Increased bottom margin */
+    margin-bottom: 10px;
     color: #000000;
 }
 
@@ -375,10 +380,10 @@ body {
 }
 
 .tag {
-    background-color: #E0E0E0;
-    color: #000000;
+    background-color: #E0E0E0; /* Light grey background for tags */
+    color: #000000; /* Black text for tags */
     padding: 4px 10px;
-    border: 1px solid #000000;
+    border: 1px solid #000000; /* Black border for tags */
     font-size: 0.85em;
     border-radius: 3px;
     display: flex;
@@ -401,12 +406,12 @@ body {
     color: #000000;
     font-size: 1em;
     outline: none;
-    transition: border-color 0.2s ease, outline 0.2s ease; /* Add outline to transition */
+    transition: border-color 0.2s ease, outline 0.2s ease;
 }
 
 #add-tag-input:focus {
-    outline: 1px solid #000000; /* Black outline on focus */
-    border-color: #000000; /* Ensure border is black on focus */
+    outline: 1px solid #000000;
+    border-color: #000000;
 }
 
 /* Styles for Search View */
